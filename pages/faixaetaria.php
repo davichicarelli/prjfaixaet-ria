@@ -3,15 +3,15 @@ $nome = $_GET["nome"];
 $idade = filter_input(INPUT_GET, "idade", FILTER_VALIDATE_INT);
 
 if ($idade <= 12) {
-    $mensagem = "Você é uma criança, ACESSO NEGADO!";
+    $mensagem = $nome.", você é uma Criança e tem" .$idade." anos, ACESSO NEGADO!";
 } else if ($idade <= 17) {
-    $mensagem = "Você é um adolescente, ACESSO NEGADO!";
+    $mensagem = $nome.", você é um Adolescente e tem " .$idade." anos, ACESSO NEGADO!";
 } else if ($idade <= 25) {
-    $mensagem = "Você é um Jovem, você está autorizado a entrar no sistema!";
+    $mensagem = $nome.", você é um Jovem e tem ".$idade." anos, você está autorizado a entrar no sistema!";
 } else if ($idade <= 59) {
-    $mensagem = "Você é um Adulto, você está autorizado a entrar no sistema!";
+    $mensagem = $nome.", você é um Adulto e tem ".$idade." anos, você está autorizado a entrar no sistema!";
 } else if ($idade >= 60) {
-    $mensagem = "Você faz parte da Melhor Idade, você está autorizado a entrar no sistema!";
+    $mensagem = $nome.", você está na Maior Idade e tem ".$idade. " anos, você está autorizado a entrar no sistema!";
 }
 ?>
 
